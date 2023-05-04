@@ -3,7 +3,7 @@ import os
 import mathematique
 
 setup(
-    name="pkg_test_mathematique2",
+    name="pkg_test_mathematique_testpi",
     version=mathematique.__version__,
     classifiers=["Topic :: Education", "Topic :: Documentation"],
     packages=["mathematique"],
