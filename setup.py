@@ -6,7 +6,7 @@ setup(
     name="pkg_test_mathematique",
     version=mathematique.__version__,
     classifiers=["Topic :: Education", "Topic :: Documentation"],
-    packages=["mathematique", "test_mathematique"],
+    packages=["mathematique"],
     description="demonstration de creation d'un package Python",
     long_description=open(os.path.join(os.path.dirname(__file__), "README.txt")).read(),
     license="GPL V3",
