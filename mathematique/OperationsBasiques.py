@@ -1,5 +1,5 @@
 class OperationsBasiques:
-    "Classe contenant des opérations arithmétiques basiques. Plutôt basique."
+    "Classe contenant des opérations arithmétiques basiques"
 
     def addition(self, a, b):
         """
