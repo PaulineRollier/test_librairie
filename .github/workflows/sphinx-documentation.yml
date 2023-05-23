@@ -1,8 +1,6 @@
 name: Build-sphinx-docs
 
 on:
-  release:
-    types: [created]
   push:
     branches: [ "main" ]
   pull_request:
