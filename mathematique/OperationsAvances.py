@@ -1,5 +1,5 @@
 class OperationsAvances:
-    "Classe contenant des opérations arithmétiques avancées. Très avancées."
+    "Classe contenant des opérations arithmétiques avancées."
 
     def puissance(self, a, b):
         """
