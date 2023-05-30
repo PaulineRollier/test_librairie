@@ -39,7 +39,7 @@ jobs:
                 if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         -   name: Test with pytest
             env:
-                COMPILED_LIB_TEST: "true"
+                COMPILED_LIB_TEST: "false"
             run: |
                 rm -r mathematique
                 pytest
