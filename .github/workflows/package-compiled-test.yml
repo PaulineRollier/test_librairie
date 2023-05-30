@@ -48,4 +48,6 @@ jobs:
             env:
                 COMPILED_LIB_TEST: "true"
             run: |
+                echo $PATH
                 pytest
+                echo $PATH
