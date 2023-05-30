@@ -31,14 +31,8 @@ jobs:
                 ls
         -   name: Import package in new folder
             run: |
-                ls
                 cd dist/
                 pip install *.whl
-        -   uses: actions/checkout@v3
-        -   name: Set up Python ${{ matrix.python-version }}
-            uses: actions/setup-python@v3
-            with:
-                python-version: ${{ matrix.python-version }}
         -   name: Install dependencies
             run: |
                 python -m pip install --upgrade pip
@@ -48,6 +42,7 @@ jobs:
             env:
                 COMPILED_LIB_TEST: "true"
             run: |
+                rm -r mathematique
                 echo $PATH
                 pytest
                 echo $PATH
