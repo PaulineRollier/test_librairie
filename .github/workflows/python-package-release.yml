@@ -11,13 +11,6 @@ name: Build and Upload Python Package
 on:
   release:
     types: [published]
-  workflow_dispatch:
-    inputs:
-      python-package:
-        required: true
-      sphinx-documentation:
-        required: true
-
 
 jobs:
   deploy:
