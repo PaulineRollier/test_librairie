@@ -25,8 +25,10 @@ jobs:
         -   name: Build wheel package
             run: |
                 python setup.py sdist bdist_wheel
+                ls
         -   name: Import package in new folder
             run: |
+                ls
                 cd dist/
                 pip install *.whl
         -   uses: actions/checkout@v3
