@@ -37,6 +37,10 @@ jobs:
             python-version: ["3.7", "3.8", "3.9", "3.10"]
 
         steps:
+        - name: Import package in new folder
+          run: |
+            cd dist/
+            pip install *.whl
         - uses: actions/checkout@v3
         - name: Set up Python ${{ matrix.python-version }}
           uses: actions/setup-python@v3
@@ -46,7 +50,7 @@ jobs:
           run: |
             python -m pip install --upgrade pip
             pip install pytest
-            if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+            if [ -f requirements.txt ]; then pip install -r requirements.txt; f
         - name: Test with pytest
           run: |
             pytest
