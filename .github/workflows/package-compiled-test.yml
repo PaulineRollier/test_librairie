@@ -1,14 +1,19 @@
 name: Package compiled test
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
 
 jobs:
+    tests:
+        uses: ./.github/workflows/python-package.yml
+    sphinx:
+        uses: ./.github/workflows/sphinx-documentation.yml
     build:
         name: Tests with wheel package
+        needs: [tests, sphinx]
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false

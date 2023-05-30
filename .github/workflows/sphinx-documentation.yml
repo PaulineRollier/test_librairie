@@ -1,11 +1,7 @@
-name: Build-sphinx-docs
+name: Build sphinx documentation
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-    
+on: [workflow_call]
+
 jobs: 
   build: 
     runs-on: ubuntu-latest
